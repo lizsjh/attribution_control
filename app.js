@@ -23,7 +23,7 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:700,
+        delay:900,
         loading: true,
         content:'I can help you with that. First, could you tell me why you need to replace or return this textbook in more details?'
     });
@@ -38,7 +38,7 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:700,
+        delay:900,
         loading: true,
         content:'Got it. Could you input your order number below?'
     });
@@ -53,13 +53,13 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:1200,
+        delay:900,
         loading: true,
         content:'Alright. I will process your request. Please give me a moment.'
     });
 }).then(function(){
     return botui.message.add({
-        delay:800,
+        delay:1200,
         loading: true,
         content:'The 3rd edition is currently in stock. For your information, shipping will be free, and you need to pay $50 more. Would you still like to exchange the book?'
     });
@@ -75,7 +75,7 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:700,
+        delay:900,
         loading: true,
         content:'Alright. I will process your request. Please hold on for a moment.'
     });
