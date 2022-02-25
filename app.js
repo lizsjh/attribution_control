@@ -4,7 +4,7 @@ const response=new Array();
 botui.message.add({
     delay:500,
     loading: true,
-    content: 'Hello. This is Taylor, and I am a bot created by the customer service department.'
+    content: 'Hello. This is Alex, and I am a bot created by the customer service department.'
 }).then(function(){
     return botui.message.add({
         delay:700,
@@ -25,7 +25,7 @@ botui.message.add({
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'I can help you with that. First, could you tell me your order number?'
+        content:'I can help you with that. First, could you tell me why you need to replace or return this textbook in more details?'
     });
 }).then(function(){
     return botui.action.text({
@@ -40,13 +40,7 @@ botui.message.add({
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'Got it. Please allow me few seconds for pulling up your order.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:1200,
-        loading: true,
-        content:'Which item(s) is missing?'
+        content:'Got it. Could you input your order number below?'
     });
 }).then(function(){
     return botui.action.text({
@@ -59,31 +53,15 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:800,
-        loading: true,
-        content:'Can you describe conditions of the rest of the items?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-    
-    });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:900,
-        loading: true,
-        content:'Thank you for telling me. Meanwhile, I’ve identified the problem: there was a miscommunication in the packaging process.'
-    });
-}).then(function(){
-    return botui.message.add({
         delay:1200,
         loading: true,
-        content:'I can create a new order that will be delivered within a day, or I can refund for the missing item. What would you prefer?'
+        content:'Alright. I will process your request. Please give me a moment.'
+    });
+}).then(function(){
+    return botui.message.add({
+        delay:800,
+        loading: true,
+        content:'The 3rd edition is currently in stock. For your information, shipping will be free, and you need to pay $50 more. Would you still like to exchange the book?'
     });
 }).then(function(){
     return botui.action.text({
