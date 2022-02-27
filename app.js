@@ -61,7 +61,7 @@ botui.message.add({
     return botui.message.add({
         delay:1200,
         loading: true,
-        content:'The 3rd edition is currently in stock. For your information, shipping will be free, and you need to pay $50 more. Would you still like to exchange the book?'
+        content:'The 3rd edition is currently in stock. For your information, shipping will be free, and you need to pay $50 more. What would you like to do next?'
     });
 }).then(function(){
     return botui.action.text({
@@ -77,7 +77,7 @@ botui.message.add({
     return botui.message.add({
         delay:900,
         loading: true,
-        content:'Alright. I will process your request. Please hold on for a moment.'
+        content:'I will process your request. Please hold on for a moment.'
     });
 }).then(function(){
     return botui.message.add({
