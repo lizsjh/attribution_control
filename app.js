@@ -1,4 +1,9 @@
-var botui=new BotUI('app');
+import BotUI from 'botui'
+import Vue from 'vue'
+
+var botui=new BotUI('app'{
+  vue: Vue // or this
+});
 const response=new Array();
 
 botui.message.add({
